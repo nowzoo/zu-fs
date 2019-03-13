@@ -1,0 +1,11 @@
+const fs = require('fs-extra');
+const path = require('path');
+const pkg = require('./package.json');
+const _ = require('lodash');
+const safe = _.omit(pkg, 'scripts', 'engines', 'devDependencies');
+const cwd = process.cwd();
+const dist = path.join(cwd, 'dist');
+fs.emptyDirSync(dist);
+fs.outputJsonSync(path.join(dist, 'package.json'), safe, {spaces: '\t'});
+fs.copySync(path.join(cwd, 'LICENSE'), path.join(dist, 'LICENSE'));
+fs.copySync(path.join(cwd, 'README.md'), path.join(dist, 'README.md'));

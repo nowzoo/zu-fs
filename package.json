@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "File system library.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "clean": "rimraf coverage build tmp",
-    "build": "tsc -p tsconfig.release.json",
+    "build": "node prebuild && tsc -p tsconfig.release.json",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "test": "jest --coverage",
@@ -20,6 +21,7 @@
     "@types/mime": "^2.0.1",
     "@types/node": "^10.12.18",
     "jest": "~23.6.0",
+    "lodash": "^4.17.11",
     "prettier": "1.15.3",
     "rimraf": "^2.6.3",
     "ts-jest": "~23.10.5",
@@ -34,7 +36,6 @@
   "dependencies": {
     "chokidar": "^2.1.2",
     "fs-extra": "^7.0.1",
-    "lodash": "^4.17.11",
     "mime": "^2.4.0",
     "moment": "^2.24.0",
     "rxjs": "^6.4.0"

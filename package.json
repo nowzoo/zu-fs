@@ -12,6 +12,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "homepage": "https://github.com/nowzoo/zu-fs#readme",
+  "bugs": "https://github.com/nowzoo/zu-fs/issues",
+  "license": "MIT",
+  "repository": "github:nowzoo/zu-fs",
   "engines": {
     "node": ">= 10.13 <11"
   },
@@ -32,7 +36,6 @@
     "typescript": "^3.2.2"
   },
   "author": "Christopher Carson <chris@nowzoo.com>",
-  "license": "Apache-2.0",
   "dependencies": {
     "chokidar": "^2.1.2",
     "fs-extra": "^7.0.1",
